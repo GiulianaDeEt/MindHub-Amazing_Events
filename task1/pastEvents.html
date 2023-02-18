@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="./task1/Resources Amazing Events/iconoAmazingEvents.png"> 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="./task1/style.css">
+    <title>Amazing Events</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg  d-flex flex-row" style="background-color:#e9e1ed">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#"><img src="./Resources/LogoAmazingEvents.png" alt="Logo" width="150" class="d-inline-block align-text-top"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">  
+                    <div class="navbar-nav">
+                        <a class="nav-link" href="../home.html">Home</a>
+                        <a class="nav-link" href="./upcomingEvents.html">Upcoming Events</a>
+                        <a class="nav-link" href="./pastEvents.html">Past Events</a>
+                        <a class="nav-link" href="./contact.html">Contact</a>
+                        <a class="nav-link" href="./stats.html">Stats</a>
+                    </div>  
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <!-- barra de páginas -->
+        <div class="bar2 d-flex flex-row justify-content-evenly" style="background-color:#fbf4ff">
+            <div class="bar_backbutton"><a title="Stats" href="./upcomingEvents.html"><i class="fa-solid fa-chevron-left"></i></a></div>
+            <div class="bar_pageTitle"><h2>Past Events</h2></div>
+            <div class="bar_nextbutton"><a title="Stats" href="./contact.html"><i class="fa-solid fa-angle-right"></i></a></div>
+        </div>
+        <!-- presentación de categorias + buscador -->
+        <nav class="navbar d-flex flex-row">
+            <div class="container-fluid justify-content-evenly">
+                <form class="form-group">
+                    <fieldset class="container-fluid">
+                        <label><input type="checkbox" value="x" name="category">Category</label>
+                        <label><input type="checkbox" value="x" name="category">Category</label>  
+                        <label><input type="checkbox" value="x" name="category">Category</label>  
+                        <label><input type="checkbox" value="x" name="category">Category</label>  
+                        <label><input type="checkbox" value="x" name="category">Category</label>   
+                    </fieldset>
+                </form>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+                </form>
+            </div>
+        </nav>
+        <div class="container" >
+            <div class="row">
+                <div class="col-12 col-md-6 col-xl-4 py-2">
+                    <div class="card" style="width: 18rem;">
+                        <img src="./Resources/Cinema.jpg" class="card-img-top" alt="cinema">
+                        <div class="card-body">
+                            <h5 class="card-title">Cinema</h5>
+                            <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est quo perspiciatis ipsam laborum a, quisquam vero doloremque nesciunt labore fugit, itaque non delectus numquam impedit eveniet debitis nam fugiat laboriosam.</p>
+                            <div class="d-flex justify-content-between"> 
+                                <p>Price $0000</p>               
+                                <a href="./task1/details.html" class="btn btn-primary">Ver más...</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 col-xl-4 py-2">
+                    <div class="card" style="width: 18rem;">
+                        <img src="./Resources/Costume_Party.jpg" class="card-img-top" alt="costume party">
+                        <div class="card-body">
+                            <h5 class="card-title">Costume Party</h5>
+                            <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est quo perspiciatis ipsam laborum a, quisquam vero doloremque nesciunt labore fugit, itaque non delectus numquam impedit eveniet debitis nam fugiat laboriosam.</p>
+                            <div class="d-flex justify-content-between"> 
+                                <p>Price $0000</p>               
+                                <a href="./task1/details.html" class="btn btn-primary">Ver más...</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                    
+                <div class="col-12 col-md-6 col-xl-4 py-2">
+                    <div class="card" style="width: 18rem;">
+                        <img src="./Resources/Marathon.jpg" class="card-img-top" alt="marathon">
+                        <div class="card-body">
+                            <h5 class="card-title">Marathon</h5>
+                            <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est quo perspiciatis ipsam laborum a, quisquam vero doloremque nesciunt labore fugit, itaque non delectus numquam impedit eveniet debitis nam fugiat laboriosam.</p>
+                            <div class="d-flex justify-content-between"> 
+                            <p>Price $0000</p>               
+                            <a href="./task1/details.html" class="btn btn-primary">Ver más...</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 col-xl-4 py-2">
+                    <div class="card" style="width: 18rem;">
+                        <img src="./Resources/Museum_Tour.jpg" class="card-img-top" alt="museum">
+                        <div class="card-body">
+                            <h5 class="card-title">Museum</h5>
+                            <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa modi molestias enim distinctio recusandae saepe optio quis impedit dolor maxime repellat nisi explicabo placeat repudiandae quibusdam, provident maiores beatae et?</p>
+                            <div class="d-flex justify-content-between"> 
+                            <p>Price $0000</p>               
+                            <a href="./task1/details.html" class="btn btn-primary">Ver más...</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <script src="https://kit.fontawesome.com/a12e544d24.js" crossorigin="anonymous"></script>
+</body>
+</html>
