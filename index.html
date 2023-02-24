@@ -9,22 +9,46 @@
     <link rel="stylesheet" href="./task1/style.css">
     <title>Amazing Events</title>
 </head>
-<body>
-<!-- header -->
-        <div class="row">
+<body> 
+<!-- logo y nav principal -->
+        <div class="row ">
             <div class="column">
                 <header>
-                    <div class="row">
-                        <div class="column">
-
+                    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                        <div class="container-fluid">
+                            <a class="navbar-brand" href="#"><img src="./task1/Resources/LogoAmazingEvents.png" alt="Logo" width="150"></a>
+                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                                <ul class="navbar-nav">
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="./index.html">Home</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="./task1/upcomingEvents.html">Upcoming Events</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="./task1/pastEvents.html">Past Events</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="./task1/contact.html">Contact</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="./task1/stats.html">Stats</a>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
-                    </div>
-                    <div class="row">
+                    </nav>
+                    
+<!-- nav secundario-->                   
+                    <div class="row" style="background-color:#fbf4ff">
                         <div class="column">
-                            <div class="bar2 justify-content-evenly" style="background-color:#fbf4ff">
-                                <div class="bar_backbutton"><a title="Stats" href="#"><i class="fa-solid fa-chevron-left"></i></a></div>
-                                <div class="bar_pageTitle"><h2>Home</h2></div>
-                                <div class="bar_nextbutton"><a title="Stats" href="#"><i class="fa-solid fa-angle-right"></i></a></div>
+                            <div class="row justify-content-around align-items-center" >
+                                <a class="d-flex justify-content-center col-3 bar_backbutton" title="Stats" href="./task1/stats.html"><i class="fa-solid fa-chevron-left"></i></a>
+                                <h2 class="d-flex justify-content-center col-3 bar_pageTitle justi">Home</h2>
+                                <a class="d-flex justify-content-center col-3 bar_nextbutton" title="Upcoming Events" href="./task1/upcomingEvents.html"><i class="fa-solid fa-angle-right"></i></a>
                             </div>
                         </div>
                     </div>
@@ -32,48 +56,148 @@
             </div>
         </div>
 
-<!-- cards -->
+<!-- categorias -->
         <div class="row">
             <div class="column">
-                <main>
+                <div>
+                    <nav class="navbar d-flex flex-row">
+                        <div class="container-fluid justify-content-evenly">
+                            <form class="form-group">
+                                <fieldset class="container-fluid">
+                                    <label class="py-8"><input type="checkbox" value="x" name="category">Category</label>
+                                    <label><input type="checkbox" value="x" name="category">Category</label>  
+                                    <label><input type="checkbox" value="x" name="category">Category</label>  
+                                    <label><input type="checkbox" value="x" name="category">Category</label>  
+                                    <label><input type="checkbox" value="x" name="category">Category</label>   
+                                </fieldset>
+                            </form>
+                            <form class="d-flex" role="search">
+                                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                                <button class="btn btn-outline-success" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+                            </form>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+
+
+
+<!-- cards -->
+        <div class="row ">
+            <div class="column">
+                <div class="container" >
                     <div class="row">
-                        <div class="col-12 col-md-6 col-xl-4 py-2">
+                        <div class="col-12 col-md-6 col-xl-4 py-4">
+                            <div class="card" style="width: 18rem;">
+                                <img src="./task1/Resources/Cinema.jpg" class="card-img-top" alt="cinema">
+                                <div class="card-body just">
+                                    <h5 class="card-title">Cinema</h5>
+                                    <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est quo perspiciatis ipsam laborum a, quisquam vero doloremque nesciunt labore fugit, itaque non delectus numquam impedit eveniet debitis nam fugiat laboriosam.</p>
+                                    <div class="d-flex justify-content-between"> 
+                                        <h6>Price $0000</h6>               
+                                        <a href="./task1/details.html" class="btn btn-primary">Ver más...</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+        
+                        <div class="col-12 col-md-6 col-xl-4 py-4">
+                            <div class="card" style="width: 18rem;">
+                                <img src="./task1/Resources/Costume_Party.jpg" class="card-img-top" alt="costume party">
+                                <div class="card-body">
+                                    <h5 class="card-title">Costume Party</h5>
+                                    <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est quo perspiciatis ipsam laborum a, quisquam vero doloremque nesciunt labore fugit, itaque non delectus numquam impedit eveniet debitis nam fugiat laboriosam.</p>
+                                    <div class="d-flex justify-content-between"> 
+                                        <h6p>Price $0000</h6>               
+                                        <a href="./task1/details.html" class="btn btn-primary">Ver más...</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                            
+                        <div class="col-12 col-md-6 col-xl-4 py-4">
+                            <div class="card" style="width: 18rem;">
+                                <img src="./task1/Resources/Food_Fair.jpg" class="card-img-top" alt="marathon">
+                                <div class="card-body">
+                                    <h5 class="card-title">Food Fair</h5>
+                                    <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est quo perspiciatis ipsam laborum a, quisquam vero doloremque nesciunt labore fugit, itaque non delectus numquam impedit eveniet debitis nam fugiat laboriosam.</p>
+                                    <div class="d-flex justify-content-between"> 
+                                    <h6>Price $0000</h6>               
+                                    <a href="./task1/details.html" class="btn btn-primary">Ver más...</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+        
+                        <div class="col-12 col-md-6 col-xl-4 py-4">
+                            <div class="card" style="width: 18rem;">
+                                <img src="./task1/Resources/Marathon.jpg" class="card-img-top" alt="marathon">
+                                <div class="card-body">
+                                    <h5 class="card-title">Marathon</h5>
+                                    <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est quo perspiciatis ipsam laborum a, quisquam vero doloremque nesciunt labore fugit, itaque non delectus numquam impedit eveniet debitis nam fugiat laboriosam.</p>
+                                    <div class="d-flex justify-content-between"> 
+                                    <h6>Price $0000</h6>               
+                                    <a href="./task1/details.html" class="btn btn-primary">Ver más...</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-md-6 col-xl-4 py-4">
                             <div class="card" style="width: 18rem;">
                                 <img src="./task1/Resources/Museum_Tour.jpg" class="card-img-top" alt="museum">
                                 <div class="card-body">
                                     <h5 class="card-title">Museum</h5>
                                     <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa modi molestias enim distinctio recusandae saepe optio quis impedit dolor maxime repellat nisi explicabo placeat repudiandae quibusdam, provident maiores beatae et?</p>
                                     <div class="d-flex justify-content-between"> 
-                                    <p>Price $0000</p>               
+                                        <h6>Price $0000</h6>               
+                                        <a href="./task1/details.html" class="btn btn-primary">Ver más...</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                            
+                        <div class="col-12 col-md-6 col-xl-4 py-4">
+                            <div class="card" style="width: 18rem;">
+                                <img src="./task1/Resources/Music_Concert.jpg" class="card-img-top" alt="marathon">
+                                <div class="card-body">
+                                    <h5 class="card-title">Music Concert</h5>
+                                    <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est quo perspiciatis ipsam laborum a, quisquam vero doloremque nesciunt labore fugit, itaque non delectus numquam impedit eveniet debitis nam fugiat laboriosam.</p>
+                                    <div class="d-flex justify-content-between"> 
+                                    <h6>Price $0000</h6>               
                                     <a href="./task1/details.html" class="btn btn-primary">Ver más...</a>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </main>
+                </div>
             </div>
         </div>
 
 <!-- footer -->
-        <div class="row ">
-            <!-- <div class="column">           -->
-                <footer class="row justify-content-evenly text-black">
-                    <div class="col-5 justify-content-center">
-                        <div>
-                            <a class="btn btn-primary btn-floating m-1" style="background-color: #000;" href="#!" role="button"><i class="fa-brands fa-square-instagram"></i></a>
-                            <a class="btn btn-primary btn-floating m-1" style="background-color: #000;" href="#!" role="button"><i class="fa-brands fa-square-facebook"></i></a>
-                            <a class="btn btn-primary btn-floating m-1" style="background-color: #000;" href="#!" role="button"><i class="fa-brands fa-square-whatsapp"></i></a>
+        <div class="row py-5">
+            <div class="column">          
+                <footer class="row">
+                    <div class="row container justify-content-center text-black">
+                        <div class="col-5">
+                            <div>
+                                <a class="btn btn-primary btn-floating m-1" style="background-color: #000;" href="#!" role="button"><i class="fa-brands fa-square-instagram"></i></a>
+                                <a class="btn btn-primary btn-floating m-1" style="background-color: #000;" href="#!" role="button"><i class="fa-brands fa-square-facebook"></i></a>
+                                <a class="btn btn-primary btn-floating m-1" style="background-color: #000;" href="#!" role="button"><i class="fa-brands fa-square-whatsapp"></i></a>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-5 justify-content-end">
-                        <div>
-                            <p>Cohorte FE04-TN</p>
+                        <div class="col-5">
+                            <div class="d-flex flex-row-reverse">
+                                <h5>Cohorte FE04-TN</h5>
+                            </div>                            
                         </div>
                     </div>
                 </footer>      
-            <!-- </div> -->
+            </div>
         </div>
     </div>
+    <script src="https://kit.fontawesome.com/a12e544d24.js" crossorigin="anonymous"></script>
 </body>
 </html>

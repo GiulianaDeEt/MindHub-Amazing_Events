@@ -9,32 +9,82 @@
     <link rel="stylesheet" href="./task1/style.css">
     <title>Amazing Events</title>
 </head>
-<body>
-    <header>
-        <nav class="navbar navbar-expand-lg  d-flex flex-row" style="background-color:#e9e1ed">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#"><img src="./Resources/LogoAmazingEvents.png" alt="Logo" width="150" class="d-inline-block align-text-top"></a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"><span class="navbar-toggler-icon"></span></button>
-                <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">  
-                    <div class="navbar-nav">
-                        <a class="nav-link" href="../home.html">Home</a>
-                        <a class="nav-link" href="./upcomingEvents.html">Upcoming Events</a>
-                        <a class="nav-link" href="./pastEvents.html">Past Events</a>
-                        <a class="nav-link" href="./contact.html">Contact</a>
-                        <a class="nav-link" href="./stats.html">Stats</a>
-                    </div>  
+<body> 
+    <!-- logo y nav principal -->
+            <div class="row ">
+                <div class="column">
+                    <header>
+                        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                            <div class="container-fluid">
+                                <a class="navbar-brand" href="#"><img src="./Resources/LogoAmazingEvents.png" alt="Logo" width="150"></a>
+                                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                                    <span class="navbar-toggler-icon"></span>
+                                </button>
+                                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                                    <ul class="navbar-nav">
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="../index.html">Home</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="./upcomingEvents.html">Upcoming Events</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="./pastEvents.html">Past Events</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="./contact.html">Contact</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="./stats.html">Stats</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </nav>
+                        
+    <!-- nav secundario-->                   
+                        <div class="row" style="background-color:#fbf4ff">
+                            <div class="column">
+                                <div class="row justify-content-around align-items-center" >
+                                    <a class="d-flex justify-content-center col-3 bar_backbutton" title="Past Events" href="./pastEvents.html"><i class="fa-solid fa-chevron-left"></i></a>
+                                    <h2 class="d-flex justify-content-center col-3 bar_pageTitle justi">Contact Us</h2>
+                                    <a class="d-flex justify-content-center col-3 bar_nextbutton" title="Stats" href="./stats.html"><i class="fa-solid fa-angle-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </header>
                 </div>
             </div>
-        </nav>
-    </header>
-    <main>
-        <div class="bar2 d-flex flex-row justify-content-evenly">
-            <div class="bar_backbutton"><a title="Past Events" href="./pastEvents.html"><i class="fa-solid fa-chevron-left"></i></a></div>
-            <div class="bar_pageTitle"><h2>Contact Us</h2></div>
-            <div class="bar_nextbutton"><a title="Stats" href="./stats.html"><i class="fa-solid fa-angle-right"></i></a></div>
+    
+    <!--  -->
+            <div class="row ">
+                <div class="column">
+                    
+                </div>
+            </div>
+    
+    <!-- footer -->
+            <div class="row py-5">
+                <div class="column">          
+                    <footer class="row">
+                        <div class="row container justify-content-center text-black">
+                            <div class="col-5">
+                                <div>
+                                    <a class="btn btn-primary btn-floating m-1" style="background-color: #000;" href="#!" role="button"><i class="fa-brands fa-square-instagram"></i></a>
+                                    <a class="btn btn-primary btn-floating m-1" style="background-color: #000;" href="#!" role="button"><i class="fa-brands fa-square-facebook"></i></a>
+                                    <a class="btn btn-primary btn-floating m-1" style="background-color: #000;" href="#!" role="button"><i class="fa-brands fa-square-whatsapp"></i></a>
+                                </div>
+                            </div>
+                            <div class="col-5">
+                                <div class="d-flex flex-row-reverse">
+                                    <h5>Cohorte FE04-TN</h5>
+                                </div>                            
+                            </div>
+                        </div>
+                    </footer>      
+                </div>
+            </div>
         </div>
-
-    </main>
-    <script src="https://kit.fontawesome.com/a12e544d24.js" crossorigin="anonymous"></script>
-</body>
+        <script src="https://kit.fontawesome.com/a12e544d24.js" crossorigin="anonymous"></script>
+    </body>
 </html>
