@@ -19,6 +19,4 @@ for(let event of data.events){
         </div>
     </div>`
     }
-}
-// console.log(htmlUpcoming);
-cardUpcoming.innerHTML = htmlUpcoming;
+} cardUpcoming.innerHTML = htmlUpcoming;

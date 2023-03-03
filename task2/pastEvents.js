@@ -19,6 +19,4 @@ for(let event of data.events){
         </div>
     </div>`
     }
-}
-// console.log(htmlPast);
-cardPast.innerHTML = htmlPast;
+} cardPast.innerHTML = htmlPast;

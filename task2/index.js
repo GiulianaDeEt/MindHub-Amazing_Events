@@ -14,8 +14,4 @@ for(let event of data.events){
             </div>
         </div>
     </div>`
-}
-// console.log(htmlEvents);
-cardEvents.innerHTML = htmlEvents;
-
-{/* <div class="card-body d-flex flex-column align-items-center justify-content-between"></div> */}
+} cardEvents.innerHTML = htmlEvents;
