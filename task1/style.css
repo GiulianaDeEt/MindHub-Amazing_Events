@@ -1,10 +1,26 @@
-html {
-    font-size: 1em;
-}
 
 a {
     color: #f838ae;
     text-decoration: none;
+}
+
+.nav-item{
+    font-size: 1.2em;
+}
+
+.nav-link:hover{
+    color: #f838ae;
+}
+
+.nav-link:active{
+    color:azure;
+    background-color: #f838ae;
+}
+
+.buttonColor{
+    color:azure;
+    background-color: #f838ae;
+    border: #f838ae;
 }
 
 @media only screen and (max-width:1040px) {
@@ -15,4 +31,9 @@ a {
         font-size: 1.5em;
         text-align: center;
     }
+}
+
+.categoria-checkbox {
+    margin-right: 4px;
+    margin-left: 10px;
 }
