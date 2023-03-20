@@ -56,8 +56,8 @@ getData().then(data => {
                                         </div>
                                     </div>
                                 </div>
-                        </div>
-                        `
+                            </div>
+                            `
                             } else if(searchInput.value.toLowerCase() == ""){
                                 categorieEvent += `
                             <div class="col-12 col-md-6 col-xl-4 py-4" data-category="${event.category}">
@@ -72,8 +72,8 @@ getData().then(data => {
                                         </div>
                                     </div>
                                 </div>
-                        </div>
-                        `
+                            </div>
+                            `
                             } 
                         }   
                     } 

@@ -182,6 +182,6 @@ async function getData(){
 
   }catch(error){
     console.log("No funciona y no se cuál es el error. Besiiii :3",error);
-    return {};
+    throw new Error("No se pudo obtener los datos de la API. Por favor, inténtelo de nuevo más tarde.");
   }
   }
