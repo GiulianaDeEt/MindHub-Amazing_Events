@@ -3,38 +3,65 @@ getData().then(data => {
     const queryString = location.search
     const params = new URLSearchParams(queryString)
     const id = params.get("id")
-    const detailsCard = document.querySelector(".cardsStructure")
+    const detailsCard = document.querySelector("#cardsStructure")
+    
+    const detailsEvent = data.events.find(e => id == e._id);
+    console.log(detailsEvent);
 
-    //Filtro los eventos con el ID y renderizo el resultado
-    const selectedEvent = data.events.find(e => id == e._id);
-    console.log(selectedEvent);
-    selectedEvent.estimate ? selectedEvent.estimate : selectedEvent.estimate = selectedEvent.assistance;
-
-    if (!selectedEvent) {
-        console.error('El evento seleccionado no existe');
-        return;
-      }
+    detailsEvent.estimate ? detailsEvent.estimate : detailsEvent.estimate = detailsEvent.assistance;
+    console.log(id);
+    
     detailsCard.innerHTML = `
-                <img src="${selectedEvent.image}" width="300" alt="People running a marathon" class="img-fluid">
+                            <div class="d-flex justify-content-center">
+                                <div class="card mt-3 col-xs-3 col-sm-6 col-md-8 mx-auto">
+                                    <div class="container text-center">
+                                        <img src="${detailsEvent.image}" class="card-img-top img-fluid mt-3">
+                                        <div class="card-body d-flex flex-column align-items-center">
+                                        <p class="card-text" style="color: #898989">${detailsEvent.date}</p>
+                                        <h5 class="card-text" style="color: #f838ae">${detailsEvent.category}</h5>        
+                                        <h2 class="card-title">${detailsEvent.name}</h2>
+                                            <p class="card-text">${detailsEvent.description}</p>
+                                            <p class="card-text">Capacity: ${detailsEvent.capacity}</p>
+                                            <p class="card-text">Place: ${detailsEvent.place}</p>
+                                            <p class="card-text">Estimate: ${detailsEvent.estimate}</p>
+                                        </div>
+                                        <div class="card-footer mb-3">
+                                            <p class="card-text"><h4>$${detailsEvent.price}</h4></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>                
+                            `;
+})
+
+
+/* <img src="${detailsEvent.image}" width="300" alt="People running a marathon" class="img-fluid">
                 <div class="card-description">
-                    <h1>${selectedEvent.name}</h1>
-                    <p><small class="text-muted">${selectedEvent.date}<br><span class="event-category">${selectedEvent.category}</span></small></p>
+                    <h1>${detailsEvent.name}</h1>
+                    <p><small class="text-muted">${detailsEvent.date}<br><span class="event-category">${detailsEvent.category}</span></small></p>
                     <p class="card-text">
-                    ${selectedEvent.description}
+                    ${detailsEvent.description}
                     </p>
-                    <p><strong>Location:</strong> ${selectedEvent.place}</p>
-                    <p><strong>Capacity:</strong> ${selectedEvent.capacity}</p>
-                    <p><strong>Assistance / estimated:</strong> ${selectedEvent.estimate}</p>
-                    <p>Price: $${selectedEvent.price}</p>
-                </div>
-                `
+                    <p><strong>Location:</strong> ${detailsEvent.place}</p>
+                    <p><strong>Capacity:</strong> ${detailsEvent.capacity}</p>
+                    <p><strong>Assistance / estimated:</strong> ${detailsEvent.estimate}</p>
+                    <p>Price: $${detailsEvent.price}</p>
+                </div> */
+
+
+
+
+
+
+
+
     // const queryString = window.location.search;
     // console.log(queryString)
     // const params = new URLSearchParams(queryString);
     // console.log(params)
     // const id = params.get("_id");
     // console.log(id)
-    // const detailsCard = document.querySelector(".detail-card")
+    // const detailsCard = document.querySelector("#cardsStructure")
     // const algo = data.events.find(card => card._id == id);
     // let datoPasado = "";
     // let currentDate = new Date(data.currentDate);
@@ -84,6 +111,3 @@ getData().then(data => {
     //         </div>
     //     </div>
     // `;
-}).catch(error => {
-    console.error('Está mas roto que roto', error);
-});

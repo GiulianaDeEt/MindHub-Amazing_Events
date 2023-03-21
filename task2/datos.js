@@ -1,3 +1,18 @@
+let urlApi = 'https://mindhub-xj03.onrender.com/api/amazing';
+
+async function getData(){
+  try{
+    const respuesta = await fetch(urlApi);
+    const data = await respuesta.json();
+    return data;
+
+  }catch(error){
+    console.log("No funciona y no se cuál es el error. Besiiii :3",error);
+    throw new Error("No se pudo obtener los datos de la API. Por favor, inténtelo de nuevo más tarde.");
+  }
+  }
+
+
 // let data = {
 //     "currentDate": "2022-01-01",
 //     "events": [
@@ -172,16 +187,3 @@
 //     ]
 //   }
 
-let urlApi = 'https://mindhub-xj03.onrender.com/api/amazing';
-
-async function getData(){
-  try{
-    const respuesta = await fetch(urlApi);
-    const data = await respuesta.json();
-    return data;
-
-  }catch(error){
-    console.log("No funciona y no se cuál es el error. Besiiii :3",error);
-    throw new Error("No se pudo obtener los datos de la API. Por favor, inténtelo de nuevo más tarde.");
-  }
-  }

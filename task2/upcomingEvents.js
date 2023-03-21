@@ -18,7 +18,7 @@ getData().then(data => {
                                 <p>${event.description.substring(0, 30)}...</p>
                                 <div class="card-footer d-flex justify-content-between align-items-center"> 
                                     <h6 class="mb-0">$${event.price}</h6>               
-                                    <a href="../task1/details.html?id=${event.id}" class="btn btn-primary buttonColor">Ver más...</a>
+                                    <a href="../task1/details.html?id=${event._id}" class="btn btn-primary buttonColor">Ver más...</a>
                                 </div>
                             </div>
                         </div>
@@ -52,7 +52,7 @@ getData().then(data => {
                                         <p>${event.description.substring(0, 40)}...</p>
                                         <div class="card-footer d-flex justify-content-between align-items-center"> 
                                             <h6 class="mb-0">$${event.price}</h6>               
-                                            <a href="../task1/details.html?id=${event.id}" class="btn btn-primary buttonColor">Ver más...</a>
+                                            <a href="../task1/details.html?id=${event._id}" class="btn btn-primary buttonColor">Ver más...</a>
                                         </div>
                                     </div>
                                 </div>
@@ -68,7 +68,7 @@ getData().then(data => {
                                         <p>${event.description.substring(0, 40)}...</p>
                                         <div class="card-footer d-flex justify-content-between align-items-center"> 
                                             <h6 class="mb-0">$${event.price}</h6>               
-                                            <a href="../task1/details.html?id=${event.id}" class="btn btn-primary buttonColor">Ver más...</a>
+                                            <a href="../task1/details.html?id=${event._id}" class="btn btn-primary buttonColor">Ver más...</a>
                                         </div>
                                     </div>
                                 </div>
@@ -89,60 +89,61 @@ getData().then(data => {
                 }
                 contenedorProductos.innerHTML = categorieEvent;
             } 
+
             /*CREADOR DE CATEGORÍAS*/
 
-    let uniqueCategories = [];
-    let categoriesHtml = "";
+            let uniqueCategories = [];
+            let categoriesHtml = "";
 
-    data.events.forEach(event => {
-        if (!uniqueCategories.includes(event.category)) {
-            uniqueCategories.push(event.category);
-            categoriesHtml += `<label data-category="${event.category}"><input type="checkbox" value="${event.category}" name="category" class="categoria-checkbox">${event.category}</label>`;
-        }
-    });
+            data.events.forEach(event => {
+                if (!uniqueCategories.includes(event.category)) {
+                    uniqueCategories.push(event.category);
+                    categoriesHtml += `<label data-category="${event.category}"><input type="checkbox" value="${event.category}" name="category" class="categoria-checkbox">${event.category}</label>`;
+                }
+            });
 
-    const container = document.getElementById("checkbox-container");
-    container.innerHTML = categoriesHtml;
+            const container = document.getElementById("checkbox-container");
+            container.innerHTML = categoriesHtml;
 
-    /*FILTRO CATEGORIAS*/
+            /*FILTRO CATEGORIAS*/
 
-    const checkboxes = document.querySelectorAll('.categoria-checkbox');
-    checkboxes.forEach(checkbox => {
-        checkbox.addEventListener('change', () => {
-            if (checkbox.checked) {
-                filtroCategorias.push(checkbox.value);
-            } else {
-                filtroCategorias = filtroCategorias.filter(category => category !== checkbox.value);
+            const checkboxes = document.querySelectorAll('.categoria-checkbox');
+            checkboxes.forEach(checkbox => {
+                checkbox.addEventListener('change', () => {
+                    if (checkbox.checked) {
+                        filtroCategorias.push(checkbox.value);
+                    } else {
+                        filtroCategorias = filtroCategorias.filter(category => category !== checkbox.value);
+                    }
+                    const filteredEvents = data.events.filter(event => filtroCategorias.includes(event.category));
+                    mostrarProductos(filteredEvents);
+                });
+            });
+
+
+            /*BUSCADOR*/
+
+            const searchInput = document.getElementById('search-input');
+            const filterBtn = document.getElementById('filterBtn');
+            const eventsList = document.querySelector('#cardsStructure');
+
+            /*FILTRO BUSCADOR*/
+
+            function filterEvents(searchTerm) {
+                const filteredEvents = data.events.filter((event) => {
+                    return (
+                        event.name.toLowerCase().includes(searchTerm) ||
+                        event.description.toLowerCase().includes(searchTerm)
+                    );
+                }); 
+                mostrarProductos(filteredEvents);
             }
-            const filteredEvents = data.events.filter(event => filtroCategorias.includes(event.category));
-            mostrarProductos(filteredEvents);
-        });
-    });
 
+            filterBtn.addEventListener('click', () => {
+                const searchTerm = searchInput.value.toLowerCase();
+                filterEvents(searchTerm);
+            });
 
-    /*BUSCADOR*/
-
-    const searchInput = document.getElementById('search-input');
-    const filterBtn = document.getElementById('filterBtn');
-    const eventsList = document.querySelector('#cardsStructure');
-
-    /*FILTRO BUSCADOR*/
-
-    function filterEvents(searchTerm) {
-        const filteredEvents = data.events.filter((event) => {
-            return (
-                event.name.toLowerCase().includes(searchTerm) ||
-                event.description.toLowerCase().includes(searchTerm)
-            );
-        }); 
-        mostrarProductos(filteredEvents);
-    }
-
-    filterBtn.addEventListener('click', () => {
-        const searchTerm = searchInput.value.toLowerCase();
-        filterEvents(searchTerm);
-    });
-
-    mostrarProductos();
+            mostrarProductos();
 
 })

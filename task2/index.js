@@ -105,6 +105,7 @@ getData().then(data => {
     let htmlEvents = "";
     let cardEvents = document.getElementById("cardsStructure")
     for(let event of data.events){
+        let id = event._id;
         htmlEvents += `
         <div class="col-12 col-md-6 col-xl-4 py-4" data-category="${event.category}">
             <div class="card mx-auto text-center" style="width: 18rem">
@@ -114,7 +115,7 @@ getData().then(data => {
                     <p>${event.description.substring(0, 40)}...</p>
                     <div class="card-footer d-flex justify-content-between align-items-center"> 
                         <h6 class="mb-0">$${event.price}</h6>               
-                        <a href="./task1/details.html?id=${event.id}" class="btn btn-primary buttonColor">Ver más...</a>
+                        <a href="./task1/details.html?id=${id}" class="btn btn-primary buttonColor">Ver más...</a>
                     </div>
                 </div>
             </div>
@@ -131,6 +132,7 @@ getData().then(data => {
         contenedorProductos.innerHTML = "";
         let categorieEvent = "";
         for(let event of todasLasCategorias){
+            let id = event._id;
             if (filtroCategorias.length === 0 || filtroCategorias.includes(event.category)) {
                 if(event.name.toLowerCase().includes(searchInput.value.toLowerCase()) || event.description.toLowerCase().includes(searchInput.value.toLowerCase())){
                     categorieEvent += `
@@ -142,7 +144,7 @@ getData().then(data => {
                                                 <p>${event.description.substring(0, 40)}...</p>
                                                 <div class="card-footer d-flex justify-content-between align-items-center"> 
                                                     <h6 class="mb-0">$${event.price}</h6>               
-                                                    <a href="../task1/details.html?id=${event.id}" class="btn btn-primary buttonColor">Ver más...</a>
+                                                    <a href="../task1/details.html?id=${id}" class="btn btn-primary buttonColor">Ver más...</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -158,7 +160,7 @@ getData().then(data => {
                                                     <p>${event.description.substring(0, 40)}...</p>
                                                     <div class="card-footer d-flex justify-content-between align-items-center"> 
                                                         <h6 class="mb-0">$${event.price}</h6>               
-                                                        <a href="../task1/details.html?id=${event.id}" class="btn btn-primary buttonColor">Ver más...</a>
+                                                        <a href="../task1/details.html?id=${id}" class="btn btn-primary buttonColor">Ver más...</a>
                                                     </div>
                                                 </div>
                                             </div>
