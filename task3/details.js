@@ -8,7 +8,7 @@ getData().then(data => {
     const detailsEvent = data.events.find(e => id == e._id);
     console.log(detailsEvent);
 
-    detailsEvent.estimate ? detailsEvent.estimate : detailsEvent.estimate = detailsEvent.assistance;
+    detailsEvent.assistance ? detailsEvent.assistance : detailsEvent.assistance = detailsEvent.estimate;
     console.log(id);
     
     detailsCard.innerHTML = `
@@ -35,26 +35,13 @@ getData().then(data => {
 })
 
 
-/* <img src="${detailsEvent.image}" width="300" alt="People running a marathon" class="img-fluid">
-                <div class="card-description">
-                    <h1>${detailsEvent.name}</h1>
-                    <p><small class="text-muted">${detailsEvent.date}<br><span class="event-category">${detailsEvent.category}</span></small></p>
-                    <p class="card-text">
-                    ${detailsEvent.description}
-                    </p>
-                    <p><strong>Location:</strong> ${detailsEvent.place}</p>
-                    <p><strong>Capacity:</strong> ${detailsEvent.capacity}</p>
-                    <p><strong>Assistance / estimated:</strong> ${detailsEvent.estimate}</p>
-                    <p>Price: $${detailsEvent.price}</p>
-                </div> */
 
 
 
 
 
 
-
-
+//==========================================================================================
     // const queryString = window.location.search;
     // console.log(queryString)
     // const params = new URLSearchParams(queryString);

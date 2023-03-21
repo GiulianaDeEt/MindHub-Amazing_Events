@@ -66,59 +66,58 @@ function upcomingInfo(data){
     //   console.log("No se obtuvo la capacidad de las categorías");
     // }
 
-    let categoryOrder = [];
+  let categoryOrder = [];
 
-    let currentDate = new Date();
-    for (let event of data.events) {
-      let eventDate = new Date(event.date);
-      if (eventDate <= currentDate) {
-        continue;
-      }
-
-      let categoryCapacity = event.capacity;
-      let category = event.category;
-      let eventRevenue = event.price * event.estimate;
-      let eventEstimate = event.estimate;
-      // if (!isFinite(eventEstimate)) {
-      //   eventEstimate = 0;
-      // }
-
-      var index = categoryOrder.findIndex(function (obj) {
-        return obj.category === event.category;
-      });
-
-      let categoryData = categoryOrder.find(item => item.category === category);
-      if (index == -1) {
-        categoryData = { category: category, revenue: eventRevenue, estimate: eventEstimate, capacity: categoryCapacity, percentage:0};
-        categoryOrder.push(categoryData);
-      }else{
-        categoryOrder[index].revenue += eventRevenue;
-        categoryOrder[index].estimate += eventEstimate;
-        categoryOrder[index].capacity += categoryCapacity;
-
-      }
+  let currentDate = new Date();
+  for (let event of data.events) {
+    let eventDate = new Date(event.date);
+    if (eventDate <= currentDate) {
+      continue;
     }
 
-    for (let categoryData of categoryOrder) {
-      if (categoryData.capacity > 0) {
-        categoryData.percentage = (categoryData.estimate / categoryData.capacity) * 100;
+    let categoryCapacity = event.capacity;
+    let category = event.category;
+    let eventRevenue = event.price * event.estimate;
+    let eventEstimate = event.estimate;
+        // if (!isFinite(eventEstimate)) {
+        //   eventEstimate = 0;
+        // }
+
+    var index = categoryOrder.findIndex(function (obj) {
+      return obj.category === event.category;
+    });
+
+    let categoryData = categoryOrder.find(item => item.category === category);
+    if (index == -1) {
+      categoryData = { category: category, revenue: eventRevenue, estimate: eventEstimate, capacity: categoryCapacity, percentage:0};
+        categoryOrder.push(categoryData);
+    }else{
+      categoryOrder[index].revenue += eventRevenue;
+      categoryOrder[index].estimate += eventEstimate;
+      categoryOrder[index].capacity += categoryCapacity;
+    }
+  }
+
+  for (let categoryData of categoryOrder) {
+    if (categoryData.capacity > 0) {
+      categoryData.percentage = (categoryData.estimate / categoryData.capacity) * 100;
       // } else {
       //   categoryData.attendancePercentage = 0;
       //   console.log("Sigue sin obtener infomración de la capacidad de cada categoría");
-      }
-      console.log(categoryData.category, categoryData.revenue, categoryData.percentage);
     }
+    console.log(categoryData.category, categoryData.revenue, categoryData.percentage);
+  }
 
-    let tbodyUpcoming = document.getElementById("tbodyUpcoming");
-    for (let categoryData of categoryOrder) {
-      let tr = document.createElement("tr");
-      tr.innerHTML = `
-        <td>${categoryData.category}</td>
-        <td>$${categoryData.revenue}</td>
-        <td>${categoryData.percentage.toFixed(2)}%</td>
-      `;
-      tbodyUpcoming.appendChild(tr);
-    }
+  let tbodyUpcoming = document.getElementById("tbodyUpcoming");
+  for (let categoryData of categoryOrder) {
+    let tr = document.createElement("tr");
+    tr.innerHTML = `
+                  <td>${categoryData.category}</td>
+                  <td>$${categoryData.revenue}</td>
+                  <td>${categoryData.percentage.toFixed(2)}%</td>
+                  `;
+    tbodyUpcoming.appendChild(tr);
+  }
 }upcomingInfo(data);
 
 //TERCERA SECCIÓN
