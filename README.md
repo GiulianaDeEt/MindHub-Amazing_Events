@@ -4,7 +4,8 @@
 
 
 
-<p align="center">Este es un proyecto que estoy realizando durante la segunda parte del curso de Frontend que ofrece <a href="https://mindhubweb.com/">MindHub.<a/>.</p>
+<p align="center">Este es un proyecto que estoy realizando durante la segunda parte del curso de Frontend que ofrece <a href="https://mindhubweb.com/">MindHub.<a/>. Resulta de una página web de eventos dónde se pueden observar todos los eventos que tienen, también los eventos que han pasado y los que están a futuro (dando la posibilidad de obtener más información clickeando un botón). Además tiene una página de contacto y una tabla dándo más información sobre los eventos en general.</p>
+<p align="center">A diferencia del proyecto anterior (<a href="https://github.com/GiulianaDeEt/MindHub-frontend">Club deportivo<a/>), esta página tiene componentes dinámicos.</p>
   
 <p align="center">Estaré actualizando todas las semanas hasta la finalización del curso.</p>
 <p align="start">
@@ -40,7 +41,13 @@
   
   <H4>Segunda etapa "TASK 2". </H4>
   <ul>
-    <li></li>
+    <li>Crear página javascript "Data"</li>
+    <li>Darle dinamismo a las página html utilizando la información de Data:</li>
+      <ul>
+        <li>Crear página index.js para darle dinamismo a la página Home</li>
+        <li>Crear página upcomingEvents.js para darle dinamismo a la página Upcoming Events</li>
+        <li>Crear página pastEvents.js para darle dinamismo a la página Past Events</li>
+      </ul>
   </ul>
     
   <H4>Tercera etapa "TASK 3". </H4>
@@ -83,7 +90,6 @@
           </ul>
       </ul>
   </ul>
- 
   </details>
   
   <details> 
@@ -92,6 +98,7 @@
   <li>HTML5</li>
   <li>CSS</li>
   <li>JAVASCRIPT</li>
+  <li>BOOTSTRAP</li>
   </ul>
   </details>
   
