@@ -25,19 +25,64 @@
   <summary><H3>Etapas realizadas:</H3></summary>
   <H4>Primera etapa "TASK 1". </H4>
   <ul>
-  <li>Crear página 6 html 
-  <ul>
-  <li>Home</li>
-  <li>Upcoming events</li>
-  <li>Past events</li>
-  <li>Contact</li>
-  <li>Details</li>
-  <li>Stats</li>
-  </ul>
-  </li>
-  <li>Crear nabvar con botones. </li>
+    <li>Crear página 6 html 
+      <ul>
+        <li>Home</li>
+        <li>Upcoming events</li>
+        <li>Past events</li>
+        <li>Contact</li>
+        <li>Details</li>
+        <li>Stats</li>
+      </ul>
+    </li>
+    <li>Crear nabvar con botones. </li>
   </ul>
   
+  <H4>Segunda etapa "TASK 2". </H4>
+  <ul>
+    <li></li>
+  </ul>
+    
+  <H4>Tercera etapa "TASK 3". </H4>
+  <ul>
+    <li>Incorporar filtro de búsqueda por texto y por checkboxes de categoría</li>
+    <ul>
+      <li>Deben funcionar individualmente</li>
+      <li>Deben funcionar combinados</li>
+      <li>Deben estar en home, past events y upcoming events</li>
+    </ul>
+    <li>Checkbox de categoríaso</li>
+      <ul>
+        <li>Generarlos dinámicamente extrayendo las categorías del array de eventos</li>
+        <li>No deben repetirse</li>
+      </ul>
+    <li>Búsqueda por input de texto</li>
+      <ul>
+        <li>Buscar coincidencias en nombre y descripción del evento.</li>
+      </ul>
+    <li>Si no se encuentran eventos, mostrar un texto que diga que no hay resultados y que prueben modificando los filtros</li>
+    <li>Botón de cards debe levar a página de detalle que dinámicamente muestre la info correspondiente</li>
+  </ul>
+    
+  <H4>Cuarta etapa "TASK 4". </H4>
+  <ul>
+    <li>Reemplazar el objeto data proporcionado anteriormente por el json de respuesta de la API de Amazing Events</li>
+    <li>Rellenar las estadísticas dinámicamente</li>
+      <ul>
+        <li>Estadísticas de eventos:</li>
+          <ul>
+            <li>Evento con mayor porcentaje de asistencia, evento con menor porcentaje de asistencia, evento con mayor capacidad</li>
+          </ul>
+        <li>Estadísticas de eventos futuros por categoría:</li>
+          <ul>
+            <li>Categoría, ganancias de la categoría, porcentaje de asistencia de la categoría</li>
+          </ul>
+        <li>Estadísticas de eventos pasados por categoría:</li>
+          <ul>
+            <li>Categoría, ganancias de la categoría, porcentaje de asistencia de la categoría</li>
+          </ul>
+      </ul>
+  </ul>
  
   </details>
   
